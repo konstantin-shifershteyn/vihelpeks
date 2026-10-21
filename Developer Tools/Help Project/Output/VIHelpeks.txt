@@ -1,0 +1,113 @@
+[comments]
+; VI HELPEKS: HELP GENERATION MAP
+; This file maps original VIs to generated HTML and compiled CHM help files.
+;  
+; SECTIONS
+; ** 'General' section: Contains paths to CHM, HHP, and related files.
+;    If the build did not involved generation of HHP file or compiling CHM file, all values in this section are empty. 
+; ** 'File N' sections: Details for individual original/source file (e.g. VI), HTML path, and CHM tags (if the CHM was compiled).
+;
+; HOW TO LINK YOUR VI HELP:
+; ** Link directly to individual HTML files:
+;    1. Set the 'Help Path' VI property to the 'HTML FilePath' value from a 'File N' section.
+;    2. Ensure the 'Help Tag' VI property is empty.
+; ** Link to compiled CHM file:
+;    1. Set the 'Help Path' VI property to the 'CHM File' value from the 'General' section.
+;    2. Set the 'Help Tag' VI property to either "CHM LocalPath" or "CHM IndexName" value from a 'File N' section.
+
+[General]
+HHP File = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\VIHelpeks.hhp"
+TOC File = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\VIHelpeks.hhc"
+IDX File = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\VIHelpeks.hhk"
+CHM File = "C:\LV Projects\VI Helpeks LV2014 GitHub\Help\VI Helpeks\VIHelpeks.chm"
+
+[File 1]
+Original Name = "About.html"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\HTML Files\About.html"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\About.html"
+CHM LocalPath = "About.html"
+CHM IndexName = "About VI Helpeks"
+
+[File 2]
+Original Name = "Compiled.html"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\HTML Files\Compiled.html"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\Compiled.html"
+CHM LocalPath = "Compiled.html"
+CHM IndexName = "Compiled Help"
+
+[File 3]
+Original Name = "Concepts.html"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\HTML Files\Concepts.html"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\Concepts.html"
+CHM LocalPath = "Concepts.html"
+CHM IndexName = "VI Helpeks Concepts"
+
+[File 4]
+Original Name = "GetStart.html"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\HTML Files\GetStart.html"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\GetStart.html"
+CHM LocalPath = "GetStart.html"
+CHM IndexName = "Getting Started"
+
+[File 5]
+Original Name = "dir.mnu"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\dir.mnu"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\mnu_dir.html"
+CHM LocalPath = "mnu_dir.html"
+CHM IndexName = "VI Helpeks API"
+
+[File 6]
+Original Name = "News.html"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\HTML Files\News.html"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\News.html"
+CHM LocalPath = "News.html"
+CHM IndexName = "News and Changes"
+
+[File 7]
+Original Name = "Assign Help Info to VIs.vi"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\vihapisup.llb\Assign Help Info to VIs.vi"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\vi_Assign_Help_Info_to_VIs.html"
+CHM LocalPath = "vi_Assign_Help_Info_to_VIs.html"
+CHM IndexName = "Assign Help Info to VIs.vi"
+
+[File 8]
+Original Name = "Build Help Info for Help Items.vi"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\vihapisup.llb\Build Help Info for Help Items.vi"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\vi_Build_Help_Info_for_Help_Items.html"
+CHM LocalPath = "vi_Build_Help_Info_for_Help_Items.html"
+CHM IndexName = "Build Help Info for Help Items.vi"
+
+[File 9]
+Original Name = "Build VIHelpeks Project.vi"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\vihapi.llb\Build VIHelpeks Project.vi"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\vi_Build_VIHelpeks_Project.html"
+CHM LocalPath = "vi_Build_VIHelpeks_Project.html"
+CHM IndexName = "Build VIHelpeks Project.vi"
+
+[File 10]
+Original Name = "Create Palettes for VIs in Folder.vi"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\vihpalette.llb\Create Palettes for VIs in Folder.vi"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\vi_Create_Palettes_for_VIs_in_Folder.html"
+CHM LocalPath = "vi_Create_Palettes_for_VIs_in_Folder.html"
+CHM IndexName = "Create Palettes for VIs in Folder.vi"
+
+[File 11]
+Original Name = "Create Synchronized Palette.vi"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\vihpalette.llb\Create Synchronized Palette.vi"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\vi_Create_Synchronized_Palette.html"
+CHM LocalPath = "vi_Create_Synchronized_Palette.html"
+CHM IndexName = "Create Synchronized Palette.vi"
+
+[File 12]
+Original Name = "Read Help Info File.vi"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\vihapisup.llb\Read Help Info File.vi"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\vi_Read_Help_Info_File.html"
+CHM LocalPath = "vi_Read_Help_Info_File.html"
+CHM IndexName = "Read Help Info File.vi"
+
+[File 13]
+Original Name = "Set VI Help from Help Info File (Simple).vi"
+Original Path = "C:\LV Projects\VI Helpeks LV2014 GitHub\vi.lib\addons\VI Helpeks\vihapisup.llb\Set VI Help from Help Info File (Simple).vi"
+HTML FilePath = "C:\LV Projects\VI Helpeks LV2014 GitHub\Developer Tools\Help Project\Output\vi_Set_VI_Help_from_Help_Info_File_(Simple).html"
+CHM LocalPath = "vi_Set_VI_Help_from_Help_Info_File_(Simple).html"
+CHM IndexName = "Set VI Help from Help Info File (Simple).vi"

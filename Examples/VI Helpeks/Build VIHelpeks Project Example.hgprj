@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<VIHelpeksProject Version="3.1.0">
+
+  <ProjectFiles>
+    <Item Type="File" URL="Build VIHelpeks Project Example.vi"/>
+  </ProjectFiles>
+
+  <ProductInfo/>
+
+  <MasterRule>
+    <Property Name="Build_Root_Dir">%temp%\VIHelpeks\output\Build Project Example VI</Property>
+    <Property Name="BuildHelp">Enable</Property>
+    <Property Name="VIDscrMode">Description1</Property>
+    <Property Name="MenuDscrMode">Description</Property>
+    <Property Name="MenuItemIcons">Enable</Property>
+    <Property Name="Ctl_DscrMode">Description</Property>
+    <Property Name="Ctl_ClustMembers">Enable</Property>
+    <Property Name="Ctl_EnumValues">Enable</Property>
+    <Property Name="PVIIDscrMode">None</Property>
+    <Property Name="VIDetailsMode">Description2</Property>
+    <Property Name="ProductInfoMode">Disable</Property>
+    <Property Name="Source_Paths.VI_Template">..\..\Project\VI Helpeks\_Templates\Default\Help Template - VI.html</Property>
+    <Property Name="Source_Paths.Menu_Template">..\..\Project\VI Helpeks\_Templates\Default\Help Template - Menu.html</Property>
+    <Property Name="Source_Paths.PolyVI_Template">..\..\Project\VI Helpeks\_Templates\Default\Help Template - PolyVI.html</Property>
+    <Property Name="Target_Paths.HTML_Dir">html</Property>
+    <Property Name="Target_Paths.Image_Dir">image</Property>
+    <Property Name="Target_Paths.CSS_Dir">css</Property>
+    <Property Name="Target_Paths.JS_Dir">js</Property>
+    <Property Name="Source_Paths.CSS_Files">
+      <Item>..\..\Project\VI Helpeks\_Templates\Default\default.css</Item>
+    </Property>
+    <Property Name="Control_Rules">
+      <Item>
+        <Property Name="CtrlID">error in (no error)</Property>
+        <Property Name="DscrMode">Custom</Property>
+        <Property Name="Description">describes error conditions that occur before this VI runs. This input provides &lt;B&gt;standard error in&lt;/B&gt; functionality.</Property>
+        <Property Name="CustomName">error in</Property>
+      </Item>
+      <Item>
+        <Property Name="CtrlID">error in</Property>
+        <Property Name="DscrMode">Custom</Property>
+        <Property Name="Description">describes error conditions that occur before this VI runs. This input provides &lt;B&gt;standard error in&lt;/B&gt; functionality.</Property>
+      </Item>
+      <Item>
+        <Property Name="CtrlID">error out</Property>
+        <Property Name="DscrMode">Custom</Property>
+        <Property Name="Description">contains error information. This output provides &lt;B&gt;standard error out&lt;/B&gt; functionality. </Property>
+      </Item>
+    </Property>
+  </MasterRule>
+
+  <HHP_Generation>
+    <Property Name="HHP_CreateTOC">TRUE</Property>
+    <Property Name="HHP_CreateIDX">TRUE</Property>
+  </HHP_Generation>
+
+</VIHelpeksProject>

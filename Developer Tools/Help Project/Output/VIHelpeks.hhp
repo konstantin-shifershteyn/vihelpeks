@@ -1,0 +1,34 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=C:\LV Projects\VI Helpeks LV2014 GitHub\Help\VI Helpeks\VIHelpeks.chm
+Contents file=VIHelpeks.hhc
+Default Window=Main
+Display compile progress=No
+Index file=VIHelpeks.hhk
+Language=0x409 English (United States)
+Default topic=About.html
+
+
+[WINDOWS]
+Main=,"VIHelpeks.hhc","VIHelpeks.hhk","About.html","About.html",,,,,0x42120,,0x304c,[50,50,850,650],,,,,,,0
+
+
+[FILES]
+About.html
+Compiled.html
+Concepts.html
+GetStart.html
+mnu_dir.html
+News.html
+vi_Assign_Help_Info_to_VIs.html
+vi_Build_Help_Info_for_Help_Items.html
+vi_Build_VIHelpeks_Project.html
+vi_Create_Palettes_for_VIs_in_Folder.html
+vi_Create_Synchronized_Palette.html
+vi_Read_Help_Info_File.html
+vi_Set_VI_Help_from_Help_Info_File_(Simple).html
+
+
+[INFOTYPES]
+
+

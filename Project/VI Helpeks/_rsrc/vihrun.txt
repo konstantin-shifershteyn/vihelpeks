@@ -1,0 +1,2 @@
+VI Helpeks looks for 'vihrun.exe' in this folder in order to set the file association for VI Helpeks project files.
+If 'vihrun.exe' is associated with the VI Helpeks project file type, you can open help projects directly from Windows Explorer or the LabVIEW Project Explorer.

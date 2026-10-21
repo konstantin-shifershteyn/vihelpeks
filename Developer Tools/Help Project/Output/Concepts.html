@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>VI Helpeks Concepts</TITLE>
+<link rel="stylesheet" type="text/css" href="css/help.css">
+</head>
+
+<body>
+
+<p><img src="image/logo_name.png"></p>
+
+<hr>
+
+<!-- ================================================ -->
+
+<H1>Introduction</H1>
+
+<p>
+VI Helpeks is the toolkit designed to build comprehensive HTML/CHM help for LabVIEW VIs and Function Palettes. It generates help files on the basis of information taken from the source files. As well, it allows to customise content of the generated help files individually or on group basis.
+</P>
+<p>
+VI Helpeks generates help as a set of HTML files. You might use these HTML files directly for documenting your VIs or compile them into a <i>Compiled HTML Help</i> (CHM) file (<a href="compiled.html">click here for details on creating compiled help</a>).
+</p>
+
+
+<!-- ================================================ -->
+
+<a name="Build_Rules">
+<H1>Build Rules</H1>
+
+<p>
+VI Helpeks generates help files using Build Rules defined for source files and file groups. A <b>Build Rule</b> is a set of parameters that describes how to build help file, its content and location.
+</p>
+<p>
+VI Helpeks project has hierarchical structure and consists of project items. Every project item has its own Build Rule. Any rule parameter can be set to a specific value, or be defined as Default. If a perameter is defined as Default, its actual value is obtained using inheritance scheme described below.
+</p>
+
+<!-- ================================================ -->
+
+<a name="Project_Items">
+<H1>Project items</H1>
+
+<p>
+There are three basic types of project items:
+</p>
+<p>
+1) <B>Master Rule</B> defines main project properties and default rule for building help files. The Master Rule is represented in the Project Tree as <b>Project Files</b> item, which contains source files and groups. 
+</p>
+<p>
+2) <B>Group</B> contains source files and other groups, and defines default rule for items it contains. A Group inherits rule parameters from its parent group, if any, or the Master Rule.
+</p>
+<p>
+ 3) <B>File</B> is a source file for which the output HTML file is to be built. It's possible to define individual rule for every file in the project. If any parameter in the file rule is defined as Default, it is inherited from either the parent group, if any, or the Master Rule. A file rule is only applied to the file it is defined.
+ </p>
+
+<!-- ================================================ -->
+
+<a name="File_Membership">
+<H1>File membership and rule inheritance</H1>
+
+<p>
+A project might contain a file as static or/and dynamic instance. A file is <B>Static</B> if it's added to the project explicitly. A file is <B>Dynamic</B> if it's added automatically because another project file refers to it (e.g. Palette menu or Polymorphic VI). A project can contain only one static instance of a file or/and several dynamic instances of it.
+</p>
+<p>
+A file has only one build rule, independently of how many instances of it exist in the project. If a project contains several instances of a file, the actual build rule for the file is obtained the following way: If there is a static instance, actual rule parameters are inherited from its parent group. Otherwise, rule parameters are inherited from a parent group of the instance that has minimal indent level in its parent group.
+</p>
+
+<!-- ================================================ -->
+
+<a name="Source_Files">
+<H1>Source files</H1>
+
+<p>
+Source files are files that present in the <kbd>Project Tree</kbd>. Any files referred in an item's build rule are not considered as source files. A source file can be either a LabVIEW file (e.g. VI or Palette menu) or any other file. Description of how VI Helpeks operates on different source file types is present below.
+</p>
+
+<h2>Source LabVIEW files</h2>
+<p>
+VI Helpeks generates help for the following LabVIEW file types:
+</p>
+<ul>
+ <li>ordinary VI</li>
+ <li>template VI</li>
+ <li>polymorphic VI</li>
+ <li>Palette menu</li>
+</ul>
+<p>
+VI Helpeks creates several output files for a source file. Output files are HTML files, Image files, CSS and JS files. HTML and Image files are generated automatically. CSS and JS files are taken from the file rule, listed in <i>Source CSS and JS Files</i> category. Location of output files is defined in the file rule, <i>Target Paths</i> category.
+</p>
+
+<table>
+<tr>
+<td><img src="image/attention.png"></td>
+<td>
+NOTE: Help files are not generated for LabVIEW file types other than listed above.
+</td>
+</tr>
+</table>
+
+<h2>Source HTML files</h2>
+<p>
+VI Helpeks copies source file to location defined for HTML files in the file rule, <i>Target Paths</i> category.
+</p>
+<p>
+VI Helpeks might perform some converion of HTML file content:
+</p>
+<ul>
+<li>Replace references to project source files with hypertext links to respective output files (see details below)</li>
+<li>Replace product information keywords (PINF) with values defined in the Product Information category of the project. For this, put a keyword with the "<kbd>%%VIHKWD_</kbd>" prefix into HTML file. For example, <kbd>Copyright (c) 2012-2026 Konstantin Shifershteyn</kbd> is replaced with copyright notice defined in a project. You can find complete list of the product information keywords in the Context Help for controls of the Product Information category.
+</li>
+<li>Insert links to CSS files defined in the file rule into position in HTML file where the following tag found:<br>
+    <kbd>&lt;!-- #INSERT:STYLESHEETREFS : --&gt;</kbd></li>
+<li>Insert links to JavaScript files defined in the file rule into position in HTML file where the following tag found:<br>
+    <kbd>&lt;!-- #INSERT:JAVASCRIPTREFS : --&gt;</kbd></li>
+</ul>
+
+<table>
+<tr>
+<td><img src="image/attention.png"></td>
+<td>
+NOTE: VI Helpeks doesn't automatically copy any files referred in a source HTML file, you should either explicitely include such files to the project and specify proper location for them or manually copy the files.
+</td>
+</tr>
+</table>
+
+<h2>Source Image, CSS and JS files</h2>
+<p>
+A source file is merely copied to location defined in the file rule, <i>Target Paths</i> category. A relevant target path from the category is used for image, CSS and JS files.
+</p>
+
+<h2>Other Source files</h2>
+<p>
+A source file is merely copied to location defined in the file rule, <i>Target Paths</i> category. A path for HTML files is used.
+<p>
+
+
+<!-- ================================================ -->
+
+<a name="Files_Linking">
+<H1>Linking between help files</H1>
+
+<p>
+VI Helpeks automatically generates hypertext links between output help files for Palette menus and VIs referred in them. It doesn't create links between help files for VIs and non-LabVIEW files automatically.
+</p>
+<p>
+In order to create a hypertext link in an output help file to another output help file, you should use a Reference to desired source file, which is a link in the special format:
+</p>
+<p>
+<kbd>&lt;a href="hprj:source_file_name"&gt;name to appear&lt;/a&gt;</kbd>
+<br>or<br>
+<kbd>&lt;a href="hprj:source_file_name#anchor"&gt;name to appear&lt;/a&gt;</kbd>
+</p>
+<p>
+, where <kbd>source_file_name</kbd> is a name of source file in your project to which you want to create link.<br>&nbsp;
+</p>
+<p>
+ This Reference can be used in any Description parameter for VI, Palette, Control or Control Value defined in a file rule. As well, you can place such Reference into a source HTML file if you need create hypertext link to help file for a project file.
+</p>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: Activate a shortcut menu for a file in the <kbd>Project Tree</kbd> and select option <nobr><u>Copy to Clipboard >> Reference to the file</u></nobr> to create a proper reference and put it to the Clipboard.
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: Use <nobr><kbd>Insert Reference</kbd></nobr> button on the right of any Description control of a file rule in order to select a desired source file and insert reference to it into edit position in the description.
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: Use <u>shortcut menu</u> for a Description control to insert reference to a project file, web site or e-mail address into edit position in the description.
+</td>
+</tr>
+</table>
+
+<!-- ================================================ -->
+
+<a name="Control_Rules">
+<H1>VI Terminals and Control Rules</H1>
+
+<p>
+If you need define custom parameters for generating help for a VI terminal control or indicator, create a Control Rule for it. A Control Rule is part of a project item rule, it can be defined for a VI, file group or the Master Rule. An item rule might have multiple Control Rules.
+</p>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: Define control rules in the <i>Control Descriptions</i> category.
+</td>
+</tr>
+</table>
+
+<p>
+VI Helpeks identifies controls using the <b>Control Identifier</b> which is a string combined from a control label and labels of its parent controls (for cluster members). Control Rule has to be defined for every desired control (top level or a member of parent control). A cluster member does not inherit rule parameters from its parent cluster.
+</p>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: You can easy create Control Rules using <kbd>Import</kbd> button on the right of <kbd>Control List</kbd>. As well, in <u>VI Terminals</u> dialog, you can copy desired VI controls to the Clipboard and paste them to the <kbd>Control List</kbd> with the <kbd>Paste</kbd> button on the right of it.
+</td>
+</tr>
+</table>
+
+<p>
+If you define a Control Rule for a VI, the rule is applied to the VI's control or indicator that satisfies the Control Identifier specified in the rule. If you define a Control Rule for a file group or the Master Rule, the control rule is applied to relevant controls for all VIs in the group (following the rule inheritance scheme described above).
+</p>
+
+<table>
+<tr>
+<td><img src="image/attention.png"></td>
+<td>
+NOTE: VI Helpeks might have trouble of control identification if a VI have terminal controls and/or indicators with non unique names (labels). 
+</td>
+</tr>
+</table>
+
+<h2>Enumerated values</h2>
+
+<p>
+VI Helpeks includes list of values for controls and indicators of <b>Enum</b> and <b>Ring</b> types to output help files by default. By using a Control Rule you can add description for enumerated values is to be added to help file.
+</p>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: When you create a Control Rule by doing import or pasting to the <kbd>Control List</kbd>, list of enumerated values is automatically created for controls of an enumerated type.</td>
+</tr>
+</table>
+
+<p>
+When VI Helpeks generates help for an enumerated control or indicator, it lists actual values retrieved from the control or indicator. A value list defined in the Control Rule is only used to find description for every value; herewith, the search is going in the Strings property of Enum controls, and Values property of Ring controls.
+</p>
+
+
+<!-- ================================================ -->
+
+<a name="Template_Files">
+<H1>Template Files</H1>
+
+<p>
+VI Helpeks generates help files on the basis of HTML template files. It uses individual HTML template file for every source file type (ordinary VI, polymorphic VI and Palette menu). An HTML template file might use CSS and JS files for defining its style and behavior; such CSS and JS files become a part of the template therefore. A set of HTML template, CSS and JS files used in a project determines appearnce and behavior of the output help files.
+</p>
+
+<p>
+VI Helpeks comes with two sets of template files. When you create a new project, the <b>Master Rule</b> is configured to use template files relevant for the project type you choose: <b>Default</b> or <b>JavaScript based</b>. If your choise is <b>Default</b>, template files for generating pure frameless HTML files are used in the Master Rule. The <b>JavaScript based</b> selection makes the Master Rule use template files for generating help that utilize JavaScripts for providing additional features similar to LabVIEW Help.
+</p>
+
+<p>
+VI Helpeks provides possibility to use custom template files. For example, you might want to change style, layout or content of your help files; VI Helpeks gives you this opportunity (with some restrictions however). For this, create your own template files taking for the basis template files comming with VI Helpeks. Then, in the <i>Source Template File</i> category, define template files are to be used. As typically, you can do it for the whole project (Master Rule), groups or individual source files. Similar situation is for CSS and JavaScript files except you should define them in <i>Source CSS & JS Files</i> category.
+</p>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<hr>
+
+</body>
+</HTML>

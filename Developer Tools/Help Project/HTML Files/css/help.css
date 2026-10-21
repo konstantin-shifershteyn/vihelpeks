@@ -1,0 +1,67 @@
+body {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: Verdana, sans-serif;
+	font-size: 8pt;
+	overflow-x: auto;
+	overflow-y: scroll;
+	margin:  0px;
+	padding: 5px;
+}
+
+P { margin-top:6pt; margin-bottom:6pt;}
+P.Note { margin-top:10pt; margin-bottom:6pt; margin-left:0pt;}
+
+BR { font-size:4pt; }
+
+HR { height:2px; margin-bottom:5pt; color: #000000; background-color: #000000; border: 0; }
+HR.thinshort { height:1px; margin-bottom:1pt; color: #000000; background-color: #000000; border: 0; width:100pt; text-align: left; margin-left: 0;}
+
+
+H1 { margin-top:15pt; margin-bottom:3pt; font-size:140%; font-weight:bold;  }
+H2 { margin-top:15pt; margin-bottom:3pt; font-size:115%; font-weight:bold;  }
+
+UL  { margin-top:3pt; margin-bottom:3pt; }
+
+UL.about { margin-top:3pt; margin-bottom:3pt; margin-left:15pt; padding-left:0pt; list-style-position: outside;}
+LI.about { padding-bottom:3pt;}
+
+UL.news { margin-top:3pt; margin-bottom:3pt; margin-left:15pt; padding-left:0pt; list-style-position: outside;}
+LI.news { padding-bottom:3pt;}
+
+Table { font-size:100%; }
+
+TD { vertical-align:top; padding:3pt; }
+
+a:link { color: #007700 }
+a:visited { color: #7F007F }
+a:link:hover { color: #FF0000 }
+a:link:active { color: #FF0000 }
+a:link  img { border: none }
+a:visited  img { border: none }
+
+span.menu {
+/*    font-weight: bold; */
+    text-decoration: underline;
+	font-size: 1.05em;
+	white-space: nowrap;
+}
+span.item {
+/*    font-weight: bold; */
+	font-style: italic;
+    text-decoration: underline;
+	font-size: 1.05em;
+	white-space: nowrap;
+}
+
+span.code,
+span.path {
+	font-family: 'Courier New', monospace;
+	font-size: 1.05em;
+	white-space: nowrap;
+}
+
+span.prgname {
+	font-weight: bold;
+/*	font-style: italic; */
+}

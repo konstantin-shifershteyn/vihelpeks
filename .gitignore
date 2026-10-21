@@ -1,0 +1,14 @@
+# Ignore files/folders starting with a dash
+**/-*
+# Ignore files/folders ending with a dash
+**/*-
+
+# === Project specific ===
+
+
+# === LabVIEW ===
+*.aliases
+*.lvlps
+
+# === CHM ===
+*.chw

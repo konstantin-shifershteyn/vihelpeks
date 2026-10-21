@@ -1,0 +1,90 @@
+[What is VI Helpeks for?]
+
+<b>VI Helpeks</b> is a utility to build HTML help for LabVIEW VIs and Palettes. Help files look similar to help for VIs and Palettes coming with LabVIEW. For example, VI help contains connector pane image with hotspots on terminals, VI description and the Details section, description for VI terminals (including members of hierarchical data types), value description for enumerated data types, etc.
+
+VI Helpeks generates help files on the basis of information found in the source files. As well, it allows to customise content of the generated help files individually or on group basis.
+
+------------------------
+
+[Help and Examples]
+
+To learn overall concept of VI Helpeks, select <b>Help >> Open Help</b> menu.
+
+Use LabVIEW <b>Context Help</b> to get information on controls or indicators in the main VI Helpeks window as well as in any dialog. Context help might contain not only help on using a control or indicator but also relevant background information.
+
+VI Helpeks comes with a few example projects that demonstrate its capabilities and some details of use. Use <b>Help >> Open Example Project</b> menu to open an example project. When you open a project, build it with the <b>Build >> Build Help for All</b> menu. After the build completes, you can review generated help in your default browser.
+
+------------------------
+
+[A few GUI tips]
+
+Shortcut menus are available for the Project Tree and some controls in the main VI Helpeks window as well as for controls in many dialog windows.
+
+Multiple items selection is allowed in tree and listbox controls in the main VI Helpeks window and dialog windows.
+
+You can resize the main VI Helpeks window and some of dialog windows.
+
+------------------------
+
+[Build help]
+
+Build help for all project files with <b>Build >> Build Help for All</b> menu.
+
+You can build help for project files individually. For this, highlight desired file(s) in the Project Tree, activate shortcut menu and select either <b>Build Help (selected only)</b> or <b>Build Help (selected & underlying)</b>. The last option is for Palette menus, it will build help for the selected Palette and all its sub-palettes and VIs recursively.
+
+You can build help for project files in a group. For this, highlight desired group(s) in the Project Tree, activate shortcut menu and select <b>Build help for underlying files</b>. Help will be built for all underlying files recursively.
+
+------------------------
+
+[Build Destination folder]
+
+When you create a new project or open an example project, destination folder for output files is set beneath the default temporary directory on your computer. If you want to change the target folder, select either <b>Help Project</b> or <b>Project Files</b> item in the Project Tree, select the <b>Target Paths</b> category and specify the desired path in the <b>Build Root Folder</b> control.
+
+------------------------
+
+[Open built help files]
+
+In order to open an output help file, highlight the respective source file in the Project Tree, activate shortcut menu and select <b>Open Output Help File</b>. Also, you can do this using the main menu (<b>Project >> Open Output Help File</b>).
+
+VI Helpeks opens help files in your default browser.
+
+------------------------
+
+[Project types]
+
+VI Helpeks generates help files on the basis of template files. Appearance and behavior of output help files are defined by the set of template files used in a project. When you create a new project, its Master Rule is configured to use template files relevant for the project type you choose:
+*** <b>Default</b> project type is for generating pure frameless HTML files.
+*** <b>JavaScript based</b> project type is for generating HTML files that utilize JavaScripts for additional features.
+
+You can easy reconfigure the Master Rule of your project for a desired project type through <b>File >> Change project type</b> menu.
+
+-----------------------
+
+[Images in help files]
+
+VI Helpeks creates help files with images that look the same as you see them in the LabVIEW version it's running. It does not use any template images for control terminals, but retrieves actual images from LabVIEW (including typedefs and members of hierarchical data structures). VI connector pane images look the same as in the LabVIEW Context Help.
+
+-----------------------
+
+[Hotspots in VI connector pane images]
+
+A help file generated for a VI contains connector pane image with hotspots at VI terminals. If you click a terminal name in the connector pane image, you are navigated to the respective control description in the help file.
+
+Similarly, when you open <b>VI Terminals</b> dialog, you can click a VI terminal name in the connector pane image in order to select respective control (with its descendants, optionaly) in the Control Tree. Use Context Help for controls in this dialog to get more information.
+
+------------------------
+
+[Source VI state]
+
+Source VIs, for which you are going to build help, are not restricted to be in the idle state. VI Helpeks can build help for running VIs. As well, it can build help for locked and password protected VIs.
+
+------------------------
+
+[Compiled HTML Help (.CHM)]
+
+VI Helpeks doesn't create compiled help files (CHM) by itself. Instead, it creates HTML Help Project (HHP) for <b>HTML Help Workshop</b> by Microsoft, which can compile CHM files for you.
+
+Select <b>Build >> Compiled HTML Help</b> menu to run a utility that helps you to create compiled help files.
+
+If you don't have <b>HTML Help Workshop</b> installed, you can download it at Microsoft website for free:
+<link>http://msdn.microsoft.com/en-us/library/ms669985.aspx</link>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<VIHelpeksProject Version="3.1.0">
+
+  <ProjectFiles>
+    <Item Name="HTML" Type="Group">
+      <GroupRule>
+        <Property Name="Source_Paths.PolyVI_Template">.</Property>
+      </GroupRule>
+      <Item Name="css static" Type="Group">
+        <GroupRule/>
+        <Item Type="File" URL="HTML Files\css\help.css"/>
+      </Item>
+      <Item Type="File" URL="HTML Files\About.html"/>
+      <Item Type="File" URL="HTML Files\Compiled.html"/>
+      <Item Type="File" URL="HTML Files\Concepts.html"/>
+      <Item Type="File" URL="HTML Files\GetStart.html"/>
+      <Item Type="File" URL="HTML Files\News.html"/>
+    </Item>
+    <Item Name="Image" Type="Group">
+      <GroupRule>
+        <Property Name="Source_Paths.PolyVI_Template">.</Property>
+      </GroupRule>
+      <Item Type="File" URL="HTML Files\image\attention.png"/>
+      <Item Type="File" URL="HTML Files\image\logo_icon.png"/>
+      <Item Type="File" URL="HTML Files\image\logo_name.png"/>
+      <Item Type="File" URL="HTML Files\image\note.png"/>
+    </Item>
+    <Item Type="File" URL="..\..\vi.lib\addons\VI Helpeks\dir.mnu"/>
+  </ProjectFiles>
+
+  <ProductInfo>
+    <Property Name="ProductName">VI Helpeks</Property>
+    <Property Name="Version">3.1.0</Property>
+    <Property Name="Author">Konstantin Shifershteyn</Property>
+    <Property Name="Copyright">Copyright (c) 2012-2026 Konstantin Shifershteyn</Property>
+    <Property Name="Website">https://github.com/konstantin-shifershteyn/vihelpeks</Property>
+  </ProductInfo>
+
+  <MasterRule>
+    <Property Name="Build_Root_Dir">Output</Property>
+    <Property Name="BuildHelp">Enable</Property>
+    <Property Name="VIDscrMode">Description1</Property>
+    <Property Name="MenuDscrMode">Description</Property>
+    <Property Name="MenuItemIcons">Enable</Property>
+    <Property Name="Ctl_DscrMode">Description</Property>
+    <Property Name="Ctl_ClustMembers">Enable</Property>
+    <Property Name="Ctl_EnumValues">Enable</Property>
+    <Property Name="PVIIDscrMode">None</Property>
+    <Property Name="VIDetailsMode">Description2</Property>
+    <Property Name="ProductInfoMode">Enable</Property>
+    <Property Name="ProductInfoText">&lt;small&gt;&lt;nobr&gt;%PINF_PRODUCT% %PINF_VERSION%.  %PINF_COPYRIGHT%&lt;/nobr&gt;&lt;/small&gt;</Property>
+    <Property Name="Source_Paths.VI_Template">Templates\VHAPI Help Template - VI.html</Property>
+    <Property Name="Source_Paths.Menu_Template">Templates\VHAPI Help Template - Menu.html</Property>
+    <Property Name="Source_Paths.PolyVI_Template">Templates\VHAPI Help Template - PolyVI.html</Property>
+    <Property Name="Target_Paths.HTML_Dir">.</Property>
+    <Property Name="Target_Paths.Image_Dir">image</Property>
+    <Property Name="Target_Paths.CSS_Dir">css</Property>
+    <Property Name="Target_Paths.JS_Dir">js</Property>
+    <Property Name="Source_Paths.CSS_Files">
+      <Item>..\..\Project\VI Helpeks\_Templates\JSBased\default2.css</Item>
+    </Property>
+    <Property Name="Source_Paths.JS_Files">
+      <Item>..\..\Project\VI Helpeks\_Templates\JSBased\vih_frames.js</Item>
+      <Item>..\..\Project\VI Helpeks\_Templates\JSBased\vih_print.js</Item>
+      <Item>..\..\Project\VI Helpeks\_Templates\JSBased\vih_select.js</Item>
+    </Property>
+    <Property Name="Control_Rules">
+      <Item>
+        <Property Name="CtrlID">error in (no error)</Property>
+        <Property Name="CustomRule">TRUE</Property>
+        <Property Name="DscrMode">Custom</Property>
+        <Property Name="Description">describes error conditions that occur before this VI runs. This input provides &lt;B&gt;standard error in&lt;/B&gt; functionality.</Property>
+        <Property Name="ClusterMembers">Disable</Property>
+        <Property Name="CustomName">error in</Property>
+      </Item>
+      <Item>
+        <Property Name="CtrlID">error in</Property>
+        <Property Name="CustomRule">TRUE</Property>
+        <Property Name="DscrMode">Custom</Property>
+        <Property Name="Description">describes error conditions that occur before this VI runs. This input provides &lt;B&gt;standard error in&lt;/B&gt; functionality.</Property>
+        <Property Name="ClusterMembers">Disable</Property>
+      </Item>
+      <Item>
+        <Property Name="CtrlID">error out</Property>
+        <Property Name="CustomRule">TRUE</Property>
+        <Property Name="DscrMode">Custom</Property>
+        <Property Name="Description">contains error information. This output provides &lt;B&gt;standard error out&lt;/B&gt; functionality. </Property>
+        <Property Name="ClusterMembers">Disable</Property>
+      </Item>
+    </Property>
+  </MasterRule>
+
+  <ItemRules>
+    <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihapi.llb\Build VIHelpeks Project.vi">
+      <Property Name="OutName">vi_Build_VIHelpeks_Project.html</Property>
+      <Property Name="DetailsMode">Custom</Property>
+      <Property Name="DetailsText">The VI generates set of HTML files. In addition, if allowed, it generates project files for Microsoft HTML Help Workshop (HHP and related files), and compiles CHM file on the base of the HHP and HTML files created.\n\n&lt;B&gt;IMPORTANT:&lt;/B&gt; Microsoft HTML Help Workshop must be installed on the computer in order to create CHM files. You can download it at Microsoft website for free: &lt;a href="http://msdn.microsoft.com/en-us/library/ms669985.aspx" target="_blank"&gt;msdn.microsoft.com/en-us/library/ms669985.aspx&lt;/a&gt;\n</Property>
+      <Property Name="Control_Rules">
+        <Item>
+          <Property Name="CtrlID">Generate HHP (T)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Generate HHP</Property>
+        </Item>
+        <Item>
+          <Property Name="CtrlID">Generate CHM (T)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Generate CHM</Property>
+        </Item>
+        <Item>
+          <Property Name="CtrlID">Show Progress Window (T)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Show Progress Window</Property>
+        </Item>
+      </Property>
+    </ItemRule>
+    <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihapisup.llb\Build Help Info for Help Items.vi">
+      <Property Name="OutName">vi_Build_Help_Info_for_Help_Items.html</Property>
+      <Property Name="DetailsMode">None</Property>
+      <Property Name="Control_Rules">
+        <Item>
+          <Property Name="CtrlID">CHM Tag mode</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="DscrMode">Description1</Property>
+          <Property Name="EnumValDscr">
+            <EnumValue ID="0" STR="HTML Filename">Help Tag is path to HTML file inside CHM file</EnumValue>
+            <EnumValue ID="1" STR="Index Keyword">Help Tag is Keyword in the CHM file</EnumValue>
+          </Property>
+        </Item>
+        <Item>
+          <Property Name="CtrlID">Help Targeting</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="DscrMode">Description1</Property>
+          <Property Name="EnumValDscr">
+            <EnumValue ID="0" STR="absolute">Help Path is the absolute path to the help file</EnumValue>
+            <EnumValue ID="1" STR="relative">Help Path is the relative path from the source file's folder to the help file</EnumValue>
+            <EnumValue ID="2" STR="&lt;helpdir>">Help Path consists of the &lt;helpdir&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+            <EnumValue ID="3" STR="&lt;userlib>">Help Path consists of the &lt;userlib&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+            <EnumValue ID="4" STR="&lt;vilib>">Help Path consists of the &lt;vilib&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+            <EnumValue ID="5" STR="&lt;instrlib>">Help Path consists of the &lt;instrlib&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+          </Property>
+        </Item>
+      </Property>
+    </ItemRule>
+    <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihapisup.llb\Set VI Help from Help Info File (Simple).vi">
+      <Property Name="OutName">vi_Set_VI_Help_from_Help_Info_File_(Simple).html</Property>
+      <Property Name="DetailsMode">None</Property>
+      <Property Name="Control_Rules">
+        <Item>
+          <Property Name="CtrlID">Build Params.CHM Tag mode</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="DscrMode">Description1</Property>
+          <Property Name="EnumValDscr">
+            <EnumValue ID="0" STR="HTML Filename">Help Tag is path to HTML file inside CHM file</EnumValue>
+            <EnumValue ID="1" STR="Index Keyword">Help Tag is Keyword in the CHM file</EnumValue>
+          </Property>
+        </Item>
+        <Item>
+          <Property Name="CtrlID">Build Params.Help Targeting</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="DscrMode">Description1</Property>
+          <Property Name="EnumValDscr">
+            <EnumValue ID="0" STR="absolute">Help Path is the absolute path to the help file</EnumValue>
+            <EnumValue ID="1" STR="relative">Help Path is the relative path from the source file's folder to the help file</EnumValue>
+            <EnumValue ID="2" STR="&lt;helpdir>">Help Path consists of the &lt;helpdir&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+            <EnumValue ID="3" STR="&lt;userlib>">Help Path consists of the &lt;userlib&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+            <EnumValue ID="4" STR="&lt;vilib>">Help Path consists of the &lt;vilib&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+            <EnumValue ID="5" STR="&lt;instrlib>">Help Path consists of the &lt;instrlib&gt; symbolic path, Subfolder and name of the help file</EnumValue>
+          </Property>
+        </Item>
+      </Property>
+    </ItemRule>
+    <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihapisup.llb\Assign Help Info to VIs.vi">
+      <Property Name="OutName">vi_Assign_Help_Info_to_VIs.html</Property>
+      <Property Name="DetailsMode">None</Property>
+      <Property Name="DetailsText">\n</Property>
+      <Property Name="Control_Rules">
+        <Item>
+          <Property Name="CtrlID">Save to Palettes (T)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Save to Palettes</Property>
+        </Item>
+        <Item>
+          <Property Name="CtrlID">Save to VIs (T)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Save to VIs</Property>
+        </Item>
+      </Property>
+    </ItemRule>
+    <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihpalette.llb\Create Palettes for VIs in Folder.vi">
+      <Property Name="OutName">vi_Create_Palettes_for_VIs_in_Folder.html</Property>
+      <Property Name="DetailsMode">Custom</Property>
+      <Property Name="DetailsText">&lt;B&gt;Palette icons&lt;/B&gt;\nFor every folder or LLB, the VI looks for an image file to use it as icon for the respective palette. A folder's icon file is either of:\n(1) A file with the same name as the folder and &lt;B&gt;.png&lt;/B&gt; extension that resides in the folder's parent directory.\n(2) The &lt;B&gt;dir_icon.png&lt;/B&gt; file that resides in the folder.\nIf neither of these icon file is found, a default icon is set to the respective palette.\nIcon of the top-level palette can be defined in the &lt;B&gt;Palette Icon&lt;/B&gt;.</Property>
+      <Property Name="Control_Rules">
+        <Item>
+          <Property Name="CtrlID">Palette File Path (empty)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Palette File Path</Property>
+        </Item>
+        <Item>
+          <Property Name="CtrlID">Create palettes for LLBs (F)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Create palettes for LLBs</Property>
+        </Item>
+      </Property>
+    </ItemRule>
+    <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihpalette.llb\Create Synchronized Palette.vi">
+      <Property Name="OutName">vi_Create_Synchronized_Palette.html</Property>
+      <Property Name="DetailsMode">Custom</Property>
+      <Property Name="DetailsText">&lt;B&gt;Palette icons&lt;/B&gt;\nFor the given folder and all sub-folders beneath it (if allowed by &lt;C&gt;Recursively&lt;/B&gt;), the VI looks for an image file to use it as icon for the respective palette. A folder's icon file is either of:\n(1) A file with the same name as the folder and &lt;B&gt;.png&lt;/B&gt; extension that resides in the folder's parent directory.\n(2) The &lt;B&gt;dir_icon.png&lt;/B&gt; file that resides in the folder.\nIf neither of these icon file is found, a default icon is set to the respective palette.\nIcon of the top-level palette can be defined in the &lt;B&gt;Palette Icon&lt;/B&gt;.\n</Property>
+      <Property Name="Control_Rules">
+        <Item>
+          <Property Name="CtrlID">Palette File Path (empty)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Palette File Path</Property>
+        </Item>
+        <Item>
+          <Property Name="CtrlID">Recursively (F)</Property>
+          <Property Name="CustomRule">TRUE</Property>
+          <Property Name="CustomName">Recursively</Property>
+        </Item>
+      </Property>
+    </ItemRule>
+    <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihapisup.llb\Read Help Info File.vi">
+      <Property Name="OutName">vi_Read_Help_Info_File.html</Property>
+      <Property Name="DetailsMode">None</Property>
+    </ItemRule>
+  </ItemRules>
+
+  <HHP_Generation>
+    <Property Name="HHP_Target_CustomPath">VIHelpeksAPI.hhp</Property>
+    <Property Name="HHP_CreateTOC">TRUE</Property>
+    <Property Name="HHP_CreateIDX">TRUE</Property>
+    <Property Name="HHP_DefaultTopic">custom</Property>
+    <Property Name="HHP_DefaultTopic_CustomPath">About.html</Property>
+    <Property Name="CHM_Filename">..\..\..\Help\VI Helpeks\VIHelpeks.chm</Property>
+    <Property Name="CHM_AutoBuild">TRUE</Property>
+  </HHP_Generation>
+
+</VIHelpeksProject>

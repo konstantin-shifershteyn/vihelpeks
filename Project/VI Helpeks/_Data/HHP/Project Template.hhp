@@ -1,0 +1,15 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Help.chm
+Contents file=Project Template.hhc
+Default Window=Main
+Display compile progress=No
+Index file=Project Template.hhk
+Language=0x409 English (United States)
+
+[WINDOWS]
+Main=,,,,,,,,,0x42120,,0x304c,[50,50,850,650],,,,,,,0
+
+[FILES]
+
+[INFOTYPES]

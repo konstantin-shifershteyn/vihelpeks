@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<TITLE>News and Changes</TITLE>
+<link rel="stylesheet" type="text/css" href="css/help.css">
+</head>
+
+<body>
+
+<p><img src="image/logo_name.png"></p>
+
+
+<hr><!-- ########################################## -->
+
+<H1>News and changes in version 3.1</H1>
+
+<!------------------>
+<h2>Transition to the MIT License</h2>
+<p>
+Since this version, VI Helpeks has transitioned to the <b>Open Source</b> model under the terms of the <b>MIT License</b> (see the full text in the accompanying LICENSE file). All source code of the toolkit is available at GitHub:
+<br>
+<a href="https://github.com/konstantin-shifershteyn/vihelpeks" target="_blank">https://github.com/konstantin-shifershteyn/vihelpeks</a>
+</p>
+<p>
+You are entirely free to download, install, modify, and build VI Helpeks into your proprietary, closed-source commercial applications or distributed automated test systems without any legal restrictions. The only requirement is that the original copyright notice remains intact within the source code.
+</p>
+<p>
+<b>Legacy License Holders</b><br>
+For owners of commercial licenses for the previous versions (2.x and earlier), please review the <a href="#legacy_users">important notice</a> below in this document.
+</p>
+
+<!------------------>
+<h2>VI Helpeks UI (Project Manager)</h2>
+<ul class="news">
+<li class="news">
+Erasing a template file path control causes it to reset to the default value.
+</li>
+<li class="news">
+The Compiled HTML Help dialog now warns the user on an attempt to create an HHP project that already exists.
+</li>
+<li class="news">
+Project File (<span class="code">.hgprj</span>) stores the target <span class="code">.CHM</span> file path as relative to the path of the <span class="code">.HHP</span> file.
+</li>
+<li class="news">
+Bug Fix: In the Control Descriptions category, changing selection in the Controls List while editing properties of a Control, could cause improper value assignment. This has been resolved.
+</li>
+</ul>
+
+<!------------------>
+<h2>Help Generation</h2>
+<ul class="news">
+<li class="news">
+The Help Info File is now always created, regardless of whether <span class="code">.HHP</span> or <span class="code">.CHM</span> files are being generated.
+</li>
+<li class="news">
+Default Template files used for help generation (HTML/CSS/JS) are updated to ensure high-quality documentation.
+</li>
+<li class="news">
+Custom HTML Templates can use new keywords to define the appearance of VI Name. The default <span class="code">%%VIName%%</span> can be replaced with <span class="code">%%VIShortName%%</span> or <span class="code">%%VIFullName%%</span>.
+</li>
+</ul>
+
+<!------------------>
+<h2>VI Helpeks API</h2>
+<ul class="news">
+<li class="news">
+API VIs are updated and optimized.
+</li>
+<li class="news">
+API example VI is updated for better understanding and learning.
+</li>
+<li class="news">
+API example VI can now be opened directly from the LabVIEW menu via <span class="menu">Tools >> VI Helpeks >> Help and Support</span>.
+</li>
+</ul>
+
+<!------------------>
+<h2>Miscellaneous Changes</h2>
+<ul class="news">
+<li class="news">
+Various minor enhancements, code cleanups, and performance tweaks were implemented throughout the VIs, which are not explicitly listed in this file.
+</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<!--===================-->
+<a name="legacy_users">
+<hr class="thinshort">
+
+<h2 class="news" style="margin-top:2pt;">Important Notice for Existing License Holders (Versions 2.x and earlier)</h2>
+<p>
+If you or your company has previously purchased commercial licenses for older versions of VI Helpeks, please review the following terms regarding the Version 3.1 transition:
+</p>
+<p>
+1. <b>Validity of Prior Licenses:</b><br>
+All commercial licenses purchased over the past years remain completely valid, active, and legally binding for the specific versions they were issued for. Your deployment history remains fully compliant.
+</p>
+<p>
+2. <b>Transition to Version 3.1:</b><br>
+With the launch of Version 3.1, the entire toolkit has transitioned to the permissive <b>MIT License</b>. As a legacy customer, you are highly encouraged to upgrade your applications to Version 3.1 completely free of charge. By upgrading, your project automatically inherits the unrestricted commercial rights granted under the MIT framework.
+</p>
+<p>
+3. <b>Support and Maintenance Transition:</b><br>
+All historical support arrangements, email troubleshooting channels, and direct engineering consultations associated with legacy purchases have officially concluded. Version 3.1 is a mature release provided strictly **AS IS**. Legacy users requiring ongoing updates or specific modifications are welcome to leverage the unlocked source code at the GitHub repository:<br>
+<a href="https://github.com/konstantin-shifershteyn/vihelpeks" target="_blank">https://github.com/konstantin-shifershteyn/vihelpeks</a>
+</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<hr><!-- ########################################## -->
+
+<H1>News and changes in version 3.0</H1>
+
+<!------------------>
+
+<p>&nbsp;</p>
+
+<ul class="news">
+<li class="news">
+<b>Free and Open</b>: As of version 3.0, VI Helpeks has transitioned to Free/Source-Available software. VI Helpeks VIs now feature unlocked Block Diagrams, allowing you to view, modify, and adapt the toolkit to your specific workflow.
+</li>
+<li class="news">
+<b>JavaScript</b>: VI Helpeks now utilizes new native JavaScript files to embed into generated HTML/CHM help. This eliminates third-party dependencies and strengthens the security profile for both the toolkit itself and the help files it produces.
+</li>
+<li class="news">
+<b>HTML and CSS</b>: Updated HTML templates and CSS files, combined with new JavaScript files, enable the creation of high-quality HTML/CHM help.
+</li>
+<li class="news">
+<b>File Association</b>: VI Helpeks no longer automatically sets Windows file associations for its project files. This strengthens the security profile of the toolkit. Please use the <span class="menu">File</span> menu to open projects. (This behavior can still be enabled manually; see the <a href="#migration30">Migration from Previous Versions</a> topic below.)
+</li>
+<li class="news">
+<b>General</b>: Includes various code optimizations and UI enhancements.
+</li>
+</ul>
+
+<a id="migration30">
+<h2>Migration from Previous Versions</h2>
+<ul class="news">
+<li class="news">
+<b>Default JS Files</b>: When opening a project created in a previous version, VI Helpeks will automatically update references from old JavaScript files to the new native ones. This transition is designed to be seamless and should not affect help file functionality if default CSS and HTML templates are used. However, we recommend a quick verification of your generated output after the update.
+</li>
+<li class="news">
+<b>Custom CSS files</b>: If your project uses custom CSS, you should update it with the code from either the '<span class="path">default.css</span>' or '<span class="path">default2.css</span>' file, depending on your project type (Default or JS based). These files are located in the <span class="path">&lt;labview&gt;\project\VI Helpeks\_Template</span> folder. Copy the code marked with the comment "new VI Helpeks 3.0 definitions" from the default CSS into your custom file.
+</li>
+<li class="news">
+<b>Custom HTML Templates</b>: If your project uses custom HTML templates, it is recommended to update the <span class="code">&lt;body&gt;</span> tag. Replace it with the <span class="code">&lt;body class="helpVI"&gt;</span>, <span class="code">&lt;body class="helpPolyVI"&gt;</span>, or <span class="code">&lt;body class="helpMenu"&gt;</span>, depending on the template's intended use (ordinary VI, polymorphic VI, or palette).
+</li>
+<li class="news">
+<b>File Association</b>: To preserve VI Helpeks project file associations, use the support and example files located in the <span class="path">&lt;labview&gt;\project\VI Helpeks\_rsrc</span> folder to build the VI Helpeks Project Runner executable. This allows you to restore file associations manually (via Windows Settings or the VI Helpeks Settings dialog) without modifying the core toolkit's security profile.
+</li>
+</ul>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<hr><!-- ########################################## -->
+
+<H1>News and changes in version 2.0</H1>
+
+<!------------------>
+<h2>Project File Association</h2>
+<p>
+In Windows, VI Helpeks creates file type association for its project files. This means you can open VI Helpeks project from Windows Explorer or any other program which uses file type association for opening a document; for example, LabVIEW Project Explorer.
+</p>
+
+<table>
+<tr>
+<td><img src="image/attention.png"></td>
+<td>
+NOTE: This feature is activated automatically during VI Helpeks installation if both VIPM and LabVIEW are running with administrator privilege. To activate the feature manually, start LabVIEW with the "Run as administrator" option and open VI Helpeks. Perform the project file type association in the <span class="item">VI Helpeks Settings</span> dialog.
+</td>
+</tr>
+</table>
+
+<!------------------>
+<h2>VI Helpeks API</h2>
+<p>
+API VIs are intended to build help project programmatically and assist a developer in creating help system for his/her VIs.
+</p>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: API VIs can be found in the <span class="menu">Addons >> VI Hepleks API</span> function palette.
+<td>
+</tr>
+</table>
+
+
+ <!------------------>
+<h2>Help generation</h2>
+<ul class="news">
+<li class="news">Palette files that have the "Synchronize with directory" option are supported now.</li>
+<li class="news">Resolved the conflict of non-unique HTML file names when there are source files with the identical names (e.g. VIs with the same name might belong to different project libraries or classes, or palette files might have identical name in different folders, etc.).</li>
+<li class="news">Resolved issue of searching hotspot regions on VI connectors image for VI terminals that have caption.</li>
+<li class="news">A source HTML file might contain Product Information Keywords with the "<span class="code">%%VIHKWD_</span>" prefix. During building help, the keywords are replaced with values defined in the project. Complete list of the keywords can be found in the Context Help for controls of the <span class="item">Product Information</span> category in VI Helpeks GUI.</li>
+<li class="news">A build log file indicates additional information on the build status.</li>
+<li class="news">more minor improvements in help generation...</li>
+</ul>
+
+<!------------------>
+<h2>VI Helpeks GUI</h2>
+<ul class="news">
+<li class="news">It's possible to define custom path of the target CHM file now. Configurable in the <span class="item">Compiled HTML Help</span> dialog.</li>
+<li class="news">Build help can automatically create CHM file after generating HTML files. The option is configurable in the <span class="item">Compiled HTML Help</span> dialog.</li>
+<li class="news">It's possible to open CHM file from the main window now. It's also possible to open the topic in CHM file for a desired source file (use shortcut menu for desired file in the project tree).</li>
+<li class="news">New menu option for editing source files. For non-VIs, it opens a source file in an editor program. Program association is configurable in the <span class="item">VI Helpeks Settings</span> dialog.</li>
+<li class="news">New <span class="item">VI Documentaion</span> utility assists in editing VI documentation properties.</li>
+<li class="news">Many utility dialogs are improved.</li>
+<li class="news">Main GUI menu is modified.</li>
+<li class="news">more minor GUI improvements...</li>
+</ul>
+
+<!------------------>
+<h2>VI Documentation utility</h2>
+<p>
+The VI Documentation utility assists in documenting your VIs. It provides an easy way to define the description and relevant properties of a VI, as well as its controls and indicators.
+</p>
+
+<table>
+<tr>
+<td><img src="image/note.png"></td>
+<td>
+TIP: To edit properties of a VI, use <span class="menu">Tools >> VI Helpeks >> VI Documentation</span> menu of the VI.
+<td>
+</tr>
+</table>
+
+ 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+<hr><!-- ########################################## -->
+
+<H1>News and changes in version 1.1</H1>
+
+<!------------------>
+<h2>Product Information category</h2>
+<p>
+New Product Information Category contains parameters describing the product for which the help files be generated, as well as author, copyright, contact and other relevant information. The parameters define values for Product Information Keywords that can be used for generating help files.
+</p>
+<p>
+In addition, the Product Information category defines whether help files contain Product Information Section and its content.
+</p>
+
+
+<!------------------>
+<h2>Help generation</h2>
+<p>
+Any text obtained from Palettes and VIs is now properly encoded to HTML format if it contains reserved HTML characters. There is an exception for &lt;B&gt; tag in Palette, VI or Control description that is passed to output files. There is no exception for VI and Control names, value strings, etc. 
+</p>
+
+
+<!------------------>
+<h2>Shortcut menus</h2>
+<p>
+Shortcut menus are now available for Description controls. Along with typical edit options, the menus provide options to insert HTML formatting tags, reference to project files, links to web sites and e-mail addresses, and Product Information Keywords.
+</p>
+
+
+<!------------------>
+<h2>Main menu</h2>
+<p>
+New option to clean up build folder in the Build menu.
+</p>
+
+
+<!------------------>
+<h2>Miscellaneous</h2>
+<ul class="news">
+<li class="news">VI Helpeks launcher indicates progress of starting program.</li>
+<li class="news">Improved Quick Tips dialog.</li>
+<li class="news">Updated examples.</li>
+</ul>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</HTML>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+
+<HEAD>
+<meta name="GENERATOR" content="VI Helpeks 1.0">
+<!-- Sitemap 1.0 -->
+</HEAD>
+
+<BODY>
+<UL>
+  <LI><OBJECT type="text/sitemap">
+    <param name="Name" value="About">
+    <param name="Local" value="About.html">
+    </OBJECT>
+  <LI><OBJECT type="text/sitemap">
+    <param name="Name" value="News and Changes">
+    <param name="Local" value="News.html">
+    </OBJECT>
+  <LI><OBJECT type="text/sitemap">
+    <param name="Name" value="VI Helpeks Concepts">
+    <param name="Local" value="Concepts.html">
+    </OBJECT>
+  <LI><OBJECT type="text/sitemap">
+    <param name="Name" value="Getting Started">
+    <param name="Local" value="GetStart.html">
+    </OBJECT>
+  <LI><OBJECT type="text/sitemap">
+    <param name="Name" value="Compiled HTML Help">
+    <param name="Local" value="Compiled.html">
+    </OBJECT>
+  <LI><OBJECT type="text/sitemap">
+    <param name="Name" value="VI Reference">
+    <param name="Local" value="">
+    </OBJECT>
+    <UL>
+      <LI><OBJECT type="text/sitemap">
+        <param name="Name" value="VI Helpeks API">
+        <param name="Local" value="mnu_dir.html">
+        </OBJECT>
+        <UL>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Assign Help Info to VIs.vi">
+            <param name="Local" value="vi_Assign_Help_Info_to_VIs.html">
+            </OBJECT>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Build Help Info for Help Items.vi">
+            <param name="Local" value="vi_Build_Help_Info_for_Help_Items.html">
+            </OBJECT>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Build VIHelpeks Project.vi">
+            <param name="Local" value="vi_Build_VIHelpeks_Project.html">
+            </OBJECT>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Create Palettes for VIs in Folder.vi">
+            <param name="Local" value="vi_Create_Palettes_for_VIs_in_Folder.html">
+            </OBJECT>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Create Synchronized Palette.vi">
+            <param name="Local" value="vi_Create_Synchronized_Palette.html">
+            </OBJECT>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Read Help Info File.vi">
+            <param name="Local" value="vi_Read_Help_Info_File.html">
+            </OBJECT>
+          <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="Set VI Help from Help Info File (Simple).vi">
+            <param name="Local" value="vi_Set_VI_Help_from_Help_Info_File_(Simple).html">
+            </OBJECT>
+        </UL>
+    </UL>
+</UL>
+</BODY>
+
+</HTML>
