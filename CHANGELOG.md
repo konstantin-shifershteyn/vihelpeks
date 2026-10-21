@@ -20,12 +20,12 @@ You are entirely free to download, install, modify, and build VI Helpeks into yo
 
 ## VI Helpeks UI (Project Manager)
 * **Erasing** a template file path control causes it to reset to the default value.
-* **'Compiled HTML Help'** dialog now warns the user on an attempt to create an HHP project that already exists.
+* **Compiled HTML Help** dialog now warns the user on an attempt to create an HHP project that already exists.
 * **Project File** (`.hgprj`) stores the target `.CHM` file path as relative to the path of the `.HHP` file.
 * **Bug Fix:** In the Control Descriptions category, changing selection in the Controls List while editing properties of a Control, could cause improper value assignment. This has been resolved.
 
 ## Help Generation
-* **'Help Info File'** is now always created, regardless of whether `.HHP` or `.CHM` files are being generated.
+* **Help Info File** is now always created, regardless of whether `.HHP` or `.CHM` files are being generated.
 * **Default Template files** used for help generation (HTML/CSS/JS) are updated to ensure high-quality documentation.
 * **Custom HTML Templates** can use new keywords to define the appearance of VI Name. The default `%%VIName%%` can be replaced with `%%VIShortName%%` or `%%VIFullName%%`.
 
