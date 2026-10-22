@@ -1,4 +1,4 @@
-<VI_Package_Builder_Settings Version="2018" Created_Date="2026-10-17 08:17:08" Modified_Date="2026-10-21 14:01:33" Creator="kostya" Comments="" ID="cdca9e14c440858e18ed00c5aa169ab8">
+<VI_Package_Builder_Settings Version="2018" Created_Date="2026-10-17 08:17:08" Modified_Date="2026-10-22 09:27:06" Creator="kostya" Comments="" ID="e4c003bd174a1f144bec6a72dac56bab">
   <Library_General_Settings>
     <Package_File_Name>vihelpeks</Package_File_Name>
     <Library_Version>3.1.0.350</Library_Version>
@@ -32,8 +32,8 @@
 
 -- Launch the VI Helpeks UI using the "Tools &gt;&gt; VI Helpeks" menu. This is a manager for VI Helpeks projects used to create VI documentation.
 -- You can open and safely build example projects in the VI Helpeks UI using its "Help &gt;&gt; Examples" menu.
--- API VIs can be found in the "Addons &gt;&gt; VI Helpeks API" functions palette. Examples of the API VIs usage can be opened using the "Tools &gt;&gt; VI Helpeks" menu. You can also launch the NI Example Finder and search for "VIHelpeks", or  find it in the "&lt;labview&gt;\Examples\VI Helpeks" folder.
--- When launched from a specific VI's "Tools &gt;&gt; VI Helpeks" menu, the "VI Documentation" utility opens to help you review and edit documentation properties of that specific VI and its controls.
+-- API VIs are intended to build help projects programmatically and assist developers in creating help system for their VIs. The API VIs can be found in the " Addons &gt;&gt; VI Helpeks API" function palette.  Examples of the API VIs usage can be opened using the "Tools &gt;&gt; VI Helpeks" menu or found with the NI Example Finder.
+-- The "VI Documentation" utility is intended to review and edit documentation properties of a VI and its controls. When launched from a VI's "Tools &gt;&gt; VI Helpeks" menu, it opens and operates on that specific VI.
 </Description>
       <Copyright>Copyright (c) 2012-2026 Konstantin Shifershteyn</Copyright>
       <Packager>Konstantin Shifershteyn</Packager>

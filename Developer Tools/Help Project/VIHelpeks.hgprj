@@ -94,7 +94,7 @@
     <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihapi.llb\Build VIHelpeks Project.vi">
       <Property Name="OutName">vi_Build_VIHelpeks_Project.html</Property>
       <Property Name="DetailsMode">Custom</Property>
-      <Property Name="DetailsText">The VI generates set of HTML files. In addition, if allowed, it generates project files for Microsoft HTML Help Workshop (HHP and related files), and compiles CHM file on the base of the HHP and HTML files created.\n\n&lt;B&gt;IMPORTANT:&lt;/B&gt; Microsoft HTML Help Workshop must be installed on the computer in order to create CHM files. You can download it at Microsoft website for free: &lt;a href="http://msdn.microsoft.com/en-us/library/ms669985.aspx" target="_blank"&gt;msdn.microsoft.com/en-us/library/ms669985.aspx&lt;/a&gt;\n</Property>
+      <Property Name="DetailsText">The VI generates a set of HTML files. In addition, if enabled, it generates project files for Microsoft HTML Help Workshop (.HHP and related files). Afterwards, if enabled, it compiles a final .CHM file based on the created (or already existing) .HHP and HTML files.\n\n&lt;b&gt;NOTICE:&lt;/b&gt; In order to generate a CHM file, it is required to have Microsoft HTML Help Workshop installed on your computer. You can download it on the Microsoft website for free:\n&lt;a href="http://msdn.microsoft.com/en-us/library/ms669985.aspx" target="_blank"&gt;msdn.microsoft.com/en-us/library/ms669985.aspx&lt;/a&gt;\n</Property>
       <Property Name="Control_Rules">
         <Item>
           <Property Name="CtrlID">Generate HHP (T)</Property>
@@ -189,7 +189,7 @@
     <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihpalette.llb\Create Palettes for VIs in Folder.vi">
       <Property Name="OutName">vi_Create_Palettes_for_VIs_in_Folder.html</Property>
       <Property Name="DetailsMode">Custom</Property>
-      <Property Name="DetailsText">&lt;B&gt;Palette icons&lt;/B&gt;\nFor every folder or LLB, the VI looks for an image file to use it as icon for the respective palette. A folder's icon file is either of:\n(1) A file with the same name as the folder and &lt;B&gt;.png&lt;/B&gt; extension that resides in the folder's parent directory.\n(2) The &lt;B&gt;dir_icon.png&lt;/B&gt; file that resides in the folder.\nIf neither of these icon file is found, a default icon is set to the respective palette.\nIcon of the top-level palette can be defined in the &lt;B&gt;Palette Icon&lt;/B&gt;.</Property>
+      <Property Name="DetailsText">&lt;b&gt;Palette icons&lt;/b&gt;\nFor the given folder and all sub-folders beneath it, the VI looks for an image file to use as an icon for the respective palette. A folder's icon file can be one of the following:\n(1) A file with the same name as the folder and a &lt;b&gt;.png&lt;/b&gt; extension that resides in the folder's parent directory.\n(2) A file with the &lt;b&gt;dir_icon.png&lt;/b&gt; name that resides inside the folder itself.\nIf neither of these icon files is found, a default icon is applied to the respective palette.\n\nThe icon of the top-level palette can be defined explicitly in the &lt;b&gt;Palette Icon&lt;/b&gt; input terminal.\n</Property>
       <Property Name="Control_Rules">
         <Item>
           <Property Name="CtrlID">Palette File Path (empty)</Property>
@@ -206,7 +206,7 @@
     <ItemRule ItemName="..\..\vi.lib\addons\VI Helpeks\vihpalette.llb\Create Synchronized Palette.vi">
       <Property Name="OutName">vi_Create_Synchronized_Palette.html</Property>
       <Property Name="DetailsMode">Custom</Property>
-      <Property Name="DetailsText">&lt;B&gt;Palette icons&lt;/B&gt;\nFor the given folder and all sub-folders beneath it (if allowed by &lt;C&gt;Recursively&lt;/B&gt;), the VI looks for an image file to use it as icon for the respective palette. A folder's icon file is either of:\n(1) A file with the same name as the folder and &lt;B&gt;.png&lt;/B&gt; extension that resides in the folder's parent directory.\n(2) The &lt;B&gt;dir_icon.png&lt;/B&gt; file that resides in the folder.\nIf neither of these icon file is found, a default icon is set to the respective palette.\nIcon of the top-level palette can be defined in the &lt;B&gt;Palette Icon&lt;/B&gt;.\n</Property>
+      <Property Name="DetailsText">&lt;b&gt;Palette icons&lt;/b&gt;\nFor the given folder and all sub-folders beneath it (if enabled by &lt;b&gt;Recursively&lt;/b&gt;), the VI looks for an image file to use as an icon for the respective palette. A folder's icon file can be one of the following:\n(1) A file with the same name as the folder and a &lt;b&gt;.png&lt;/b&gt; extension that resides in the folder's parent directory.\n(2) A file with the &lt;b&gt;dir_icon.png&lt;/b&gt; name that resides inside the folder itself.\nIf neither of these icon files is found, a default icon is applied to the respective palette.\n\nThe icon of the top-level palette can be defined explicitly in the &lt;b&gt;Palette Icon&lt;/b&gt; input terminal.\n\n</Property>
       <Property Name="Control_Rules">
         <Item>
           <Property Name="CtrlID">Palette File Path (empty)</Property>

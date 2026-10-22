@@ -26,7 +26,7 @@
 <p><b>Owning Palette: </b><a href="mnu_dir.html">VI Helpeks API</a></p>
 <!-- VI Description -->
 <p class="VIDescription">
-The VI creates a palette file synchronized with the given folder. In addition, if allowed, the VI creates a synchronized palette in every sub-folder beneath the given folder recursively.
+The VI creates a palette file synchronized with the given folder. In addition, if enabled, the VI creates a synchronized palette in every sub-folder beneath the given folder recursively.
 </p>
 <p><a href="#VIDetails">Details</a></p>
 <!-- VI Connectors Image -->
@@ -99,7 +99,7 @@ The VI creates a palette file synchronized with the given folder. In addition, i
 <a name="VIDetails"></a>
 <H2>Create Synchronized Palette details</H2>
 <p class="VIDescription">
-<B>Palette icons</B><br>For the given folder and all sub-folders beneath it (if allowed by &lt;C&gt;Recursively</B>), the VI looks for an image file to use it as icon for the respective palette. A folder's icon file is either of:<br>(1) A file with the same name as the folder and <B>.png</B> extension that resides in the folder's parent directory.<br>(2) The <B>dir_icon.png</B> file that resides in the folder.<br>If neither of these icon file is found, a default icon is set to the respective palette.<br>Icon of the top-level palette can be defined in the <B>Palette Icon</B>.
+<b>Palette icons</b><br>For the given folder and all sub-folders beneath it (if enabled by <b>Recursively</b>), the VI looks for an image file to use as an icon for the respective palette. A folder's icon file can be one of the following:<br>(1) A file with the same name as the folder and a <b>.png</b> extension that resides in the folder's parent directory.<br>(2) A file with the <b>dir_icon.png</b> name that resides inside the folder itself.<br>If neither of these icon files is found, a default icon is applied to the respective palette.<br><br>The icon of the top-level palette can be defined explicitly in the <b>Palette Icon</b> input terminal.
 </p>
 <p>&nbsp;</p>
 <HR size=1; noshade;>
