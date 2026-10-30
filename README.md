@@ -13,6 +13,22 @@ To open, modify, or rebuild the various components of this toolkit, the followin
 * **Documentation Compiler:** Microsoft HTML Help Workshop is used to compile the final documentation CHM file.
 * **Help Generation Tool:** VI Helpeks itself is used to generate documentation HTML files for its API VIs.
 
+## No Dependencies & EU CRA Compliance
+
+To simplify compliance tracking and risk assessments for commercial systems covered by the **EU Cyber Resilience Act (CRA)**, the dependency footprint and system interactions of this toolkit are detailed below:
+
+* **Zero Third-Party Dependencies:** The toolkit is written in 100% pure LabVIEW graphical code. It does not utilize, bundle, or rely on any third-party open-source libraries, external packages, or commercial software components.
+* **Environmental Tooling (CHM Compilation):** To optionally compile Microsoft HTML Help (`.chm`) binaries, the toolkit requires the standard external Microsoft HTML Help Workshop environment (`hhc.exe`) to be installed on the host system. This is an environment tooling prerequisite and is not bundled with or embedded inside the toolkit's code footprint.
+* **Native LabVIEW Execution:** All core logic, documentation parsing, and HTML generation consist exclusively of native LabVIEW primitives and standard functions.
+* **Isolated Local OS Interactivity:** 
+  * *System Interactivity:* The toolkit utilizes standard LabVIEW `System Exec.vi` and `Call Library Function Node (CLFN)` for a minimal number of tasks. For example, invoking the local Microsoft HTML Help Compiler (`hhc.exe`) to compile `.chm` help files, or opening localized project assets (such as HTML or image files) for editing or browsing.
+  * *Network Isolation:* The toolkit operates entirely locally. Neither the LabVIEW code nor the generated generated files invoke any APIs, scripts, or commands for networking, telemetry, internet data transmission, or remote execution.
+* **HTML/CSS/JS Assets:** The toolkit uses HTML template and CSS files, and can generate standard HTML files or HTML utilizing embedded JavaScript (JS) for enhanced UI layout and features. 
+  * All default HTML, JavaScript, and CSS styles supplied with the toolkit are exclusively of custom development, contain no third-party scripts, libraries, or external imports, and operate completely offline.
+  * *Custom Templates:* Users can optionally assign their own custom HTML templates, CSS, or JS files. While utilizing custom assets does not affect the toolkit's native security footprint, the security vetting and compliance of these user-supplied files are exclusively the responsibility of the end-user.
+* **Audit-Ready:** Because the full LabVIEW source code is completely unlocked and visible, the toolkit is 100% auditable for corporate Software Bill of Materials (SBOM) generation, supply-chain validation, and static code analysis.
+
+
 ## Versions Log
 The list of new features is disclosed directly inside the accompanying help documentation and the [CHANGELOG.md](CHANGELOG.md) file.
 
@@ -28,7 +44,7 @@ This project is completely open-source under the terms of the **MIT License** (s
 
 You are entirely free to download, install, modify, and build VI Helpeks into your proprietary, closed-source commercial or distributed applications without any legal restrictions. The only requirement is that the original copyright notice remains intact within the source code.
 
-* **Legacy Customer Notice:** If you or your company hold historical commercial license for older versions (2.x and earlier), please see the dedicated [Legacy License Holders section in the CHANGELOG](CHANGELOG.md#important-notice-for-existing-license-holders-versions-2x-and-earlier) for terms regarding your upgrade path and discontinued tracking fees.
+* **Legacy Customer Notice:** If you or your company hold historical commercial licenses for older versions (2.x and earlier), please see the dedicated [Legacy License Holders section in the CHANGELOG](CHANGELOG.md#important-notice-for-existing-license-holders-versions-2x-and-earlier) for terms regarding your upgrade path and discontinued tracking fees.
 
 ## Support the Developer & Project
 VI Helpeks Toolkit is distributed 100% free of charge to maximize adoption and accessibility across the global LabVIEW community. However, maintaining comprehensive developer tools requires considerable effort over years. 
